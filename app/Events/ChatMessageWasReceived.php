@@ -35,6 +35,6 @@ class ChatMessageWasReceived implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return ['App.User.1'];
+        return new PrivateChannel('App.User.1');
     }
 }
