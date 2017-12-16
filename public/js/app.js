@@ -761,7 +761,7 @@ module.exports = __webpack_require__(37);
 
 __webpack_require__(9);
 
-Echo.channel("user.1").listen("ChatMessageWasReceived", function (e) {
+Echo.channel("App.User.1").listen("ChatMessageWasReceived", function (e) {
   console.log(e.user, e.chatMessage);
 });
 
@@ -822,10 +822,8 @@ if (token) {
 window.Pusher = __webpack_require__(36);
 
 window.Echo = new __WEBPACK_IMPORTED_MODULE_0_laravel_echo___default.a({
-  broadcaster: "pusher",
-  key: "key",
-  cluster: "ap1",
-  encrypted: true
+  broadcaster: "socket.io",
+  host: window.location.hostname + ":6001"
 });
 
 /***/ }),

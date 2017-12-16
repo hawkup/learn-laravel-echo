@@ -6,6 +6,6 @@
 
 require("./bootstrap");
 
-Echo.channel("user.1").listen("ChatMessageWasReceived", e => {
+Echo.channel("App.User.1").listen("ChatMessageWasReceived", e => {
   console.log(e.user, e.chatMessage);
 });
